@@ -1,36 +1,44 @@
-Anomaly Detection Dashboard
+Project Overview
 
-This project is an interactive machine learning dashboard that detects 
-anomalies in financial transaction data using an unsupervised learning 
-algorithm.
-The application is built using Python and deployed as a web application 
-with Streamlit.
+This project builds an interactive machine learning dashboard for 
+detecting anomalies in financial transaction data.
+The application allows users to explore different anomaly detection 
+algorithms and visualize unusual patterns directly through an 
+interactive web interface.
+The dashboard is built using Streamlit, enabling real-time model 
+selection and visualization.
+
 
 Live Application
  
 https://anomaly-detection-4hvmcc9cuwbrbtzmfpws3d.streamlit.app
 
-Project Overview
+Features
 
-The goal of this project is to identify unusual patterns in financial data 
-that may indicate fraudulent or abnormal transactions.
-The system uses an unsupervised anomaly detection algorithm to detect 
-outliers in the dataset.
-Users can explore the dataset, visualize anomalies, and see how the model 
-identifies abnormal behavior.
+Interactive anomaly detection dashboard
+Multiple machine learning algorithms
+Model comparison across algorithms
+Anomaly scoring for each observation
+Visual highlighting of anomalies
+Adjustable model hyperparameters
 
-Machine Learning Model
+Algorithms Implemented
 
-The project uses: Isolation Forest
+The dashboard allows users to choose between several anomaly detection models:
 
-Isolation Forest is an unsupervised learning algorithm designed to 
-identify anomalies by isolating rare observations in the data.
+- ️Isolation Forest
+Uses random partitioning of data to isolate anomalies.
+Isolation Forest is efficient for large datasets and works well with 
+high-dimensional data.
 
-Key characteristics:
+-️ Local Outlier Factor
+Detects anomalies by comparing the local density of a point with its neighbors.
+Local Outlier Factor is effective for identifying local outliers within clusters.
 
-• Works well with high-dimensional data
-• Efficient for large datasets
-• Commonly used for fraud detection and outlier detection
+- One-Class SVM
+Learns a boundary around normal data points and flags points outside the boundary as 
+anomalies.
+One-Class SVM works well for complex non-linear data patterns.
 
 Tech Stack
 
@@ -41,22 +49,19 @@ Scikit-Learn
 Matplotlib
 Streamlit
 
-Dataset
+Dashboard Capabilities
 
-The dataset contains financial transaction information used to identify 
-abnormal behavior patterns.
-The model analyzes numerical features in the dataset and identifies 
-observations that deviate significantly from normal patterns.
-
-Run Locally
+The application allows users to:
+- Preview the dataset
+- Select an anomaly detection algorithm
+- View anomaly predictions
+- Compare models by anomaly count
+- Visualize anomalies in scatter plots
+- Tune model parameters from the sidebarRun Locally
 
 Clone the repository: git clone 
 
 https://github.com/richygamo-ml/Anomaly-Detection.git
-
-Navigate to the project folder
-
-cd Anomaly-Detection
 
 Install dependencies
 
@@ -64,10 +69,30 @@ pip install -r requirements.txt
 
 Run the Streamlit app
 
-streamlit run Anomaly_Detection_App.py
+https://anomaly-detection-4hvmcc9cuwbrbtzmfpws3d.streamlit.app
 
-Project Type
+Model Comparison 
 
-Machine Learning:
-Unsupervised Learning
-Anomaly Detection Dashboard
+The dashboard compares the anomaly counts detected by each algorithm to help users 
+evaluate model behavior.
+
+Future Improvements
+
+Possible enhancements include:
+Adding more anomaly detection algorithms
+Deploying the dashboard publicly
+Adding interactive data uploads
+Improving anomaly visualization
+
+Author: Richy Gamo
+Machine Learning & AI Projects
+
+ Why This Project Matters
+Anomaly detection is widely used in:
+fraud detection
+cybersecurity
+healthcare monitoring
+financial risk analysis
+
+This project demonstrates how multiple anomaly detection algorithms can be combined 
+into a user-friendly machine learning dashboard.
