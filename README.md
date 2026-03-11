@@ -85,9 +85,8 @@ Adding interactive data uploads
 Improving anomaly visualization
 
 Author: Richy Gamo
-Machine Learning & AI Projects
 
- Why This Project Matters
+Why This Project Matters
 Anomaly detection is widely used in:
 fraud detection
 cybersecurity
