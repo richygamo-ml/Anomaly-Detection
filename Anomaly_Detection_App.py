@@ -52,13 +52,35 @@ def train_model(X_scaled):
 
 models = train_model(X_scaled)
 
-# Model selection
+# Model selector
 model_choice = st.sidebar.selectbox(
     "Select Machine Learning Model",
     list(models.keys())
 )
 
 model = models[model_choice]
+
+# Make app more interactive
+st.sidebar.subheader("Model Parameters")
+
+contamination = st.sidebar.slider(
+    "Contamination (expected anomaly %)",
+    0.01,
+    0.20,
+    0.05
+)
+
+n_neighbors = st.sidebar.slider(
+    "LOF Neighbors",
+    5,
+    50,
+    20
+)
+
+gamma = st.sidebar.selectbox(
+    "SVM Gamma",
+    ["scale", "auto"]
+)
 
 # Predict anomalies (these algorithms don't map X->y but learn the structure of the data itself) then add Anomaly column to dataset
 prediction = model.predict(X_scaled)
